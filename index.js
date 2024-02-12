@@ -4,7 +4,8 @@ import sendEmail from './senderEmail.js';
 import cors from 'cors';
 const app = express();
 app.use(cors({
-  origin: "https://angelperez0709.github.io/"
+  origin: "https://angelperez0709.github.io/",
+  methods:["POST","GET"]
 }
 ));
 app.use(bodyParser.json());
