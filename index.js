@@ -10,6 +10,8 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.post('/', (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin",'https://angelperez0709.github.io');
+  res.setHeader("Access-Control-Allow-Methods",'POST');
   const { message, email,name } = req.body;
   sendEmail(message,email,name).then(() => {
     res.status(200).send('Email sent');
