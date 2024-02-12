@@ -3,11 +3,7 @@ import bodyParser from 'body-parser';
 import sendEmail from './senderEmail.js';
 import cors from 'cors';
 const app = express();
-app.use(cors({
-  origin: "*",
-  methods:["POST","GET"]
-}
-));
+app.use(cors());
 app.use(bodyParser.json());
 app.post('/', (req, res) => {
   const { message, email,name } = req.body;
