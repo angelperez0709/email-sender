@@ -14,7 +14,7 @@ app.post('/', (req, res) => {
   res.setHeader("Access-Control-Allow-Methods",'POST');
   const { message, email,name } = req.body;
   sendEmail(message,email,name).then(() => {
-    res.status(200).send('Email sent');
+    res.status(200).send(req.body);
   }).catch((error) => {
     console.error(error);
     res.status(500).send(JSON.stringify('Error sending email'));
