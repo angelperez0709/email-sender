@@ -21,6 +21,10 @@ app.post('/', (req, res) => {
   });
 });
 
+app.get("/",(req,res)=>{
+res.send("API is currently working");
+})
+
 app.listen(443, () => {
   console.log('Server is listening on port 443');
 });
