@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-const resend = new Resend("re_GXmhPLmj_3nnuWzBN5ucFUjkE2URgyLK1");
+const resend = new Resend(process.env.RESEND_KEY);
 
 export default async function sendEmail (message, email,name) {
   return await resend.emails.send({
