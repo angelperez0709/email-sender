@@ -5,6 +5,7 @@ import cors from 'cors';
 const app = express();
 const corsOptions = {
   origin: 'https://angelperez0709.github.io',
+  allowHeaders: 'Content-type'
 };
 
 app.use(cors(corsOptions));
